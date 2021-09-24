@@ -23,6 +23,7 @@ public class PrimeHubUserCreatedEventListenerProvider implements EventListenerPr
 
     @Override
     public void onEvent(AdminEvent event, boolean includeRepresentation) {
+        System.out.println("PrimeHub:" + event);
         if (!(event.getResourceType() == ResourceType.USER
                 && event.getOperationType() == OperationType.CREATE
                 && event.getResourcePath().startsWith("users/"))) {
